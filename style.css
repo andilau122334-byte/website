@@ -1,0 +1,406 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; 
+}
+section {
+  height: 120vh;
+}
+.name { font-family: "Segoe UI", sans-serif
+; color: hwb(35 45% 8%);
+  font-weight: 600;
+  padding: 8px 0;    
+}
+.teks_kiri {font-family: "Segoe UI", sans-serif
+; color: #7d610d;
+font-size: 45px;
+margin-left: 50px;}
+
+.Teks_kiri_kecil {font-family: "Segoe UI", sans-serif
+; color: #bd8326;
+font-size: 15px;
+margin-left: 50px;
+}
+
+.background-section {
+  background-image: url('/LatarTeh.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+  color: white; /* agar teks terlihat jelas */
+  position: relative;
+}
+
+.background-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: hwb(0 100% 0% / 0.628); /* transparan putih */
+  z-index: 0;
+}
+
+.background-section * {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  background-color: #fff5e0;
+}
+
+nav {
+  background-color: #dcfbc7;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: fixed;     
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;   
+  display: flex;
+  z-index: 1000;   
+  align-items: center;
+  padding: 10px 50px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav div img {
+  width: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: "Segoe UI", sans-serif;
+  color: #814e00;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: all;
+  transition-duration: 300ms;
+  border-bottom: 1px solid rgba(255, 68, 0, 0);
+}
+
+nav ul li a:hover {
+  color: orangered;
+  border-bottom: 1px solid orangered;
+}
+
+.menu-icon {
+  font-size: 28px;
+  display: none;
+}
+
+main {
+  padding-top: 7rem;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li:last-of-type {
+    padding-bottom: 8px;
+  }
+
+  nav ul.hidden {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#Menu {
+  scroll-margin-top: 90px;
+  min-height: 90vh;
+}
+#Tentang {
+  min-height: 110vh;
+}
+
+#Kontak {
+  min-height: 100vh;
+}
+
+.our-story {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 100px;
+}
+
+.image-container img {
+  width: 400px;
+  height: 450px;
+  margin-left: 10px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.text-container {
+  font-family: "Segoe UI", sans-serif;
+  text-align: justify;
+  max-width: 600px;
+  margin-left: 50px;
+}
+
+.text-container h2 {
+  font-family: "Segoe UI", sans-serif;
+  text-align: justify;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ba750e; /* c */
+}
+
+.text-container p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #714400;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .our-story {
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+  }
+  .text-container {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .image-container img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ====== PRODUK SECTION ====== */
+.produk-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.produk-title {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 2.2em;
+  color: #745a0c;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.produk-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.produk-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.produk-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.produk-info {
+  padding: 18px 10px;
+}
+
+.produk-info h3 {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.produk-info p {
+  color: #aa8d2d;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Responsif Produk */
+@media (max-width: 768px) {
+  .produk-container {
+    padding: 60px 20px;
+  }
+  .produk-info h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ====== KONTAK SECTION ====== */
+.kontak {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+}
+
+.kontak-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.kontak-title {
+  text-align: center;
+  font-size: 2.2em;
+  color: #7d610d;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.kontak-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.kontak-form {
+  flex: 1 1 380px;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.kontak-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.kontak-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #333;
+}
+
+.kontak-form input,
+.kontak-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: none;
+}
+
+.kontak-form input:focus,
+.kontak-form textarea:focus {
+  outline: none;
+  border-color: #7d610d;
+  box-shadow: 0 0 3px rgba(12, 116, 26, 0.3);
+}
+
+.kontak-form button {
+  background-color: #7d610d;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.kontak-form button:hover {
+  background-color: #7d610d;
+}
+
+/* ====== Info Kontak ====== */
+.kontak-info {
+  flex: 1 1 320px;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  color: #333;
+}
+
+.kontak-info h3 {
+  color: #7d610d;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.kontak-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.kontak-social {
+  margin-top: 20px;
+}
+
+.kontak-social a {
+  color: #7d610d;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.kontak-social a:hover {
+  color: #7d610d;
+}
+
+.kontak-map {
+  margin-top: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ====== Responsif ====== */
+@media (max-width: 768px) {
+  .kontak-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .kontak-form, .kontak-info {
+    width: 100%;
+    padding: 25px 30px;
+  }
+}
